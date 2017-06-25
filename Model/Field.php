@@ -2,14 +2,34 @@
 
 namespace Xoptov\BackboneFormsBundle\Model;
 
-class Field
+class Field implements FieldInterface
 {
+    /** @var string */
+    protected $name;
+
     /** @var Attribute[] */
     protected $attributes;
 
     /**
-     * @param Attribute[] $attributes
-     * @return Field
+     * {@inheritdoc}
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function setAttributes($attributes)
     {
@@ -19,7 +39,7 @@ class Field
     }
 
     /**
-     * @return Attribute[]
+     * {@inheritdoc}
      */
     public function getAttributes()
     {
