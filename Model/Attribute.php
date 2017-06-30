@@ -2,7 +2,7 @@
 
 namespace Xoptov\BackboneFormsBundle\Model;
 
-class Attribute
+class Attribute implements AttributeInterface
 {
     /** @var string */
     protected $name;
@@ -11,8 +11,7 @@ class Attribute
     protected $value;
 
     /**
-     * @param string $name
-     * @return Attribute
+     * {@inheritdoc}
      */
     public function setName($name)
     {
@@ -22,7 +21,7 @@ class Attribute
     }
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function getName()
     {
@@ -30,8 +29,7 @@ class Attribute
     }
 
     /**
-     * @param mixed $value
-     * @return Attribute
+     * {@inheritdoc}
      */
     public function setValue($value)
     {
@@ -41,7 +39,7 @@ class Attribute
     }
 
     /**
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getValue()
     {

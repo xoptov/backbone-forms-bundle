@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example form template</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+</head>
+<body>
+    <!-- Form template for common adverts -->
+    <form name="advert" class="form-horizontal">
+        <div data-fieldsets>
+            <fieldset data-fields>
+                <input id="advert-category" name="category" type="hidden" />
+
+                <div class="form-group" field-title>
+                    <label for="advert-title" class="col-lg-2 control-label">Заголовок</label>
+                    <div class="col-lg-10">
+                        <input id="advert-title" class="form-control" name="title" type="text" />
+                    </div>
+                </div>
+
+                <div class="form-group" field-description>
+                    <label for="advert-description" class="col-lg-2 control-label">Описание</label>
+                    <div class="col-lg-10">
+                        <input id="advert-description" class="form-control" name="description" type="text" />
+                        <div data-error></div>
+                    </div>
+                </div>
+
+                <div class="form-group" field-price>
+                    <label for="advert-price" class="col-lg-2 control-label">Цена</label>
+                    <div class="col-lg-10">
+                        <input id="advert-price" class="form-control" name="price" type="text" />
+                        <div data-error></div>
+                    </div>
+                </div>
+                <div class="form-group" field-auction>
+                    <label for="advert-auction" class="col-lg-2 control-label">Возможен торг</label>
+                    <div class="col-lg-10">
+                        <input id="advert-auction" class="form-control" type="checkbox" value="1" name="auction" />
+                    </div>
+                </div>
+                <div field-address>
+                    <div data-fieldsets>
+                        <fieldset data-fields>
+                            <input id="address-fiasId" name="address[fiasId]" type="hidden" />
+                            <input id="address-kladrId" name="address[kladrId]" type="hidden" />
+                            <div class="form-group">
+                                <label for="address-value" class="col-lg-2 control-label">Адрес</label>
+                                <div class="col-lg-10">
+                                    <input id="address-value" class="form-control" name="address[value]" type="text">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div field-params>
+                    <div data-fieldsets>
+                        <fieldset data-fields>
+                            <div class="form-group">
+                                <label for="params-mark" class="col-lg-2 control-label">Марка</label>
+                                <div class="col-lg-10">
+                                    <input id="params-mark" class="form-control" name="params[mark]" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="params-model" class="col-lg-2 control-label">Модель</label>
+                                <div class="col-lg-10">
+                                    <input id="params-model" class="form-control" name="params[model]" type="text">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+    <!-- End form template -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
